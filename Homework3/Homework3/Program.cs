@@ -7,13 +7,16 @@ namespace Homework3
         static void Main(string[] args)
         {
             Console.WriteLine("Hello!");
-            Console.WriteLine("Please select, if you want to convert Celsius into Fahrenheit \"CF\" or Fahrenheit into Celsius \"FC\" : ");
+            Console.WriteLine("Please select, if you want to convert Celsius into Fahrenheit \"CF\" or Fahrenheit into Celsius \"FC\": ");
             string userInput;
             userInput = Console.ReadLine().ToUpper();
             Console.WriteLine($"You choose to convert {userInput}.");
+            Temperatuur(userInput);
 
-
-            if (userInput == "CF")
+        }
+        public static void Temperatuur(string userAnswer)
+        {
+            if (userAnswer == "CF")
             {
                 double fahrenheit;
                 Console.WriteLine("Enter the amount of celsius: ");
@@ -21,8 +24,8 @@ namespace Homework3
                 Console.WriteLine("Fahrenheit = {0}", fahrenheit * 9 / 5 + 32);
                 Console.ReadLine();
             }
-            else if (userInput == "FC")
-            {
+            else if (userAnswer == "FC")
+             {
                 double celsius;
                 Console.WriteLine("Enter the amount of fahrenheit: ");
                 celsius = Convert.ToDouble(Console.ReadLine());
@@ -34,9 +37,6 @@ namespace Homework3
             {
                 Console.WriteLine("Invalid entry!");
             }
-                 
-        
-
         }
     }
 }
